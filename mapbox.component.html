@@ -1,0 +1,21 @@
+<ion-content>
+  <ion-grid>
+      <ion-row class="ion-justify-content-center" *ngFor='let lugar of lugares'>
+          <ion-col size-lg="6" size = "9.5">
+              <ion-card>
+                  <ion-toolbar color ="success">
+                      <ion-card-header slot ="start" class="ion-text-center" color ="success">
+                           {{lugar.sufix}} {{lugar.nombre}} {{lugar.prefix}}
+                      </ion-card-header>
+                      <ion-buttons slot ="end">
+                          <ion-button (click)="procesarClick(lugar)">
+                              <ion-icon icon-only name="volume-high-outline"></ion-icon>
+                          </ion-button>
+                      </ion-buttons>
+                  </ion-toolbar>
+                  <ion-img [src]="lugar.imagen"></ion-img>
+              </ion-card>
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+</ion-content>
